@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="main.css">
+    <title> </title>
+</head>
+<body>
+    <div class="panel" style="padding: 10px;">
+        <a>Amount: </a><br><input type="number" id="_amount" value="1"><br>
+        <a>Merchant: </a><br><input type="text" id="_merchant"><br>
+        <a>Payment Details: </a><br><input type="text" id="_payment_details"><br>
+        <a>Presets (if needed): </a><br>
+        <select id="_preset"></select>
+        <br><br>
+        <button onclick="submit()" style="background-color: aquamarine;">Submit</button>
+    </div>
+
+    <div class="receipt">
+        <img id="checkmark" src="/assets/checkmark.png">
+        <a id="amount">RM <span></span></a>
+        <a id="transferred">Paid</a>
+
+        <a id="points">0 points: Non-TNG eWallet QR</a>
+
+        <div id="section" style="margin-top: 250px">
+            <div class="row">
+                <span class="label">Merchant</span>
+                <span class="value merchant"></span>
+            </div>
+            <div class="row">
+                <span class="label">Payment Details</span>
+                <span class="value payment_details"></span>
+            </div>
+            <div class="row">
+                <span class="label">Transaction Type</span>
+                <img class="sl" src="/assets/duitnow.png">
+                <span class="value">DuitNow QR</span>
+            </div>
+            <div class="row">
+                <span class="label">DuitNow Ref No.</span>
+                <span class="value dn_ref_no"></span>
+            </div>
+            <div class="row">
+                <span class="label">Date/Time</span>
+                <span class="value time"></span>
+            </div>
+            <div class="row">
+                <span class="label">eWallet Ref No.</span>
+                <span class="value ewallet_ref_no"></span>
+            </div>
+            <div class="row">
+                <span class="label">Payment Method</span>
+                <span class="value">eWallet Balance</span>
+            </div>
+        </div>
+
+        <div id="bottomnav">
+            <img src="/assets/done.png" onclick="back()">
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
