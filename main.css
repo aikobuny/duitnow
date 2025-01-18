@@ -23,7 +23,7 @@
     width: 67px;
     mix-blend-mode: multiply;
     left: 50%;
-    top: 30px;
+    top: 50px;
 }
 
 #amount {
@@ -31,7 +31,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 103px;
+    top: 120px;
     font-size: 34px;
     font-family: OpenSans;
 }
@@ -43,7 +43,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 160px;
+    top: 170px;
     font-size: 14px;
     font-weight: 0;
     opacity: .5;
@@ -53,21 +53,24 @@
     display: block;
     position: absolute;
     left: 50%;
-    top: 185px;
+    top: 200px;
     transform: translateX(-50%);
     width: 210px;
-    font-size: 15px;
+    font-size: 14px;
+    text-align: center;
     background-color: #FEE0DF;
-    color: #CD0A01;
-    font-weight: bold;
-    padding: 10px;
+    color: #f50c00;
+    font-weight: 500;
+    padding: 8px;
     border-radius: 10px;
+    font-family: OpenSansSemiBold;
 }
 
 #section {
     display: block;
     position: relative;
     padding: 25px;
+    padding-bottom: 5px;
     margin-top: 35px;
     height: auto;
 }
@@ -95,7 +98,46 @@
 #section .row span.value {
     display: inline;
     text-align: right;
-    font-family: OpenSansBold;
+    font-family: OpenSansSemiBold;
+}
+
+.card {
+    width: calc(100% - 70px);
+    height: 80px;
+    margin: 0 20px;
+    background-color: #e9e9e9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 75px;
+    position: absolute;
+}
+
+.card div {
+    position: relative;
+    width: 0;
+    left: 90px;
+    font-family: OpenSans;
+}
+.card .header {
+    font-family: OpenSansSemiBold;
+    font-size: 15px;
+}
+.card .subtext {
+    font-size: 12px;
+}
+.card button {
+    position: relative;
+    width: 80px;
+    border-radius: 9999px;
+    background-color: white;
+    border: solid 1px blue;
+    color: blue;
+    height: 25px;
+    left: 90px;
+    margin-top: 5px;
 }
 
 .sl {
@@ -111,7 +153,7 @@
     left: 0;
     height: 15%;
     width: 100%;
-    box-shadow: 0px 0px 20px #88888897;
+    /* box-shadow: 0px 0px 20px #88888897; */
     z-index: 999;
     background-color: white;
 }

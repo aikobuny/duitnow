@@ -66,7 +66,7 @@ function generateTransactionRef() {
 function generateEwalletRef() {
   const now = new Date();
   const dateStr = now.toISOString().slice(0, 10).replace(/-/g, '');
-  const transactionId = Array.from({ length: 14 }, () => Math.floor(Math.random() * 10)).join('');
+  const transactionId = Array.from({ length: 14 }, () => Math.floor(Math.random() * 2)).join('');
   const serviceIdentifier = "TNG";
   function getRandomString(length) {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -84,7 +84,7 @@ function generateEwalletRef() {
 function submit() {
   let _amount = document.getElementById('_amount');
   let _merchant = document.getElementById('_merchant');
-  let _payment_details = document.getElementById('_payment_details');
+  // let _payment_details = document.getElementById('_payment_details');
   let _preset = document.getElementById('_preset');
 
   var d = new Date();
@@ -95,7 +95,7 @@ function submit() {
 
   document.getElementById('amount').innerHTML = `RM <span>${Number(_amount.value).toFixed(2)}</span>`;
   document.getElementsByClassName('merchant')[0].innerHTML = `${_merchant.value}`;
-  document.getElementsByClassName('payment_details')[0].innerHTML = `${_payment_details.value}`;
+  // document.getElementsByClassName('payment_details')[0].innerHTML = `${_payment_details.value}`;
   document.getElementsByClassName('dn_ref_no')[0].innerHTML = generateTransactionRef();
   document.getElementsByClassName('ewallet_ref_no')[0].innerHTML = generateEwalletRef();
 
